@@ -1,0 +1,24 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.blockquote:before {
+  color: #187D86;
+  content: open-quote;
+  font-size: 4em;
+  line-height: .1em;
+  margin-right: .25em;
+  vertical-align: -.3em;
+}
+
+.blockquote {
+  background: #D0F7FF;
+  border-left: 10px solid #187D86;
+  margin: 1.5em 10px;
+  padding: 1.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+.blockquote p {
+  display: inline;
+}
