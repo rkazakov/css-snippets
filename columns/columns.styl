@@ -1,0 +1,142 @@
+.cities-container
+    width: 100%
+    position: relative
+
+.cities-heading
+    margin: 15px auto
+    width: 82px
+    height: 32px
+    background: url('../img/cities-heading.svg') no-repeat 0 0
+    background-size: 82px 32px
+
+    @media $query-gt-xs
+        margin: 15px 0
+        margin-top: 10px
+        margin-left: 5px
+
+.cities-index
+    width: 100%
+    text-align: center
+
+.cities-index__list
+    margin: 0
+    padding: 0
+    list-style: none
+    text-align: center
+
+.cities-index__list-item
+    padding: 2px
+    margin-left: 2px
+    text-align: justify
+    word-wrap: break-word
+    display: inline-block
+    -webkit-column-break-inside: avoid // Chrome, Safari
+    page-break-inside: avoid // Firefox
+    break-inside: avoid // IE10+
+
+    &.empty
+        .cities-index__link
+            color: #ccc
+
+    &:first-child
+        .cities-index__link
+            &:before
+                display: none
+
+.cities-index__link
+    display: block
+    color: $colors.grey-dark
+    font-size: 35px
+    font-family: $fonts.family-tertiary
+    font-weight: $fonts.weightSemiBold
+    text-decoration: none
+    text-transform: capitalize
+
+    &:before
+        top: 10px
+        color: #ccc
+        content: '\00B7'
+        display: inline
+        padding-right: 7px
+        font-weight: 700
+        font-size: 64px
+        line-height: 35px
+        position: relative
+
+    @media $query-gt-xs
+        display: none
+
+.cities-group__list
+    list-style: none
+    padding-left: 5px
+    column-count: 3
+
+    @media $query-only-xs
+        display: table
+        column-count: 0
+
+.cities-group__list-item
+    width: 150px
+    padding-top: 20px
+    padding-right: 15px
+    -webkit-column-break-inside: avoid // Chrome, Safari
+    page-break-inside: avoid // Firefox
+    break-inside: avoid // IE10+
+
+    @media $query-only-xs
+        width: 50%
+
+    .cities-group__header
+        display: none
+
+    @media $query-only-xs
+        display: table-cell
+        float: left
+        min-height: 160px
+        height: auto
+
+        &:nth-last-child(4n+1)
+            .cities-group__header
+                display: block
+
+            .cities-group__header-top
+                top: 11px
+                right: 10px
+                float: right
+                color: $colors.grey-dark
+                font-family: $fonts.family-tertiary
+                font-size: 18px
+                font-weight: 700
+                text-transform: uppercase
+                position: relative
+
+            .cities-group__header-chevron
+                top: 18px
+                float: right
+                position: relative
+                width: 18px
+                height: 10px
+                background: url('../img/cities-chevron-up.svg') no-repeat 0 0
+                background-size: 18px 10px
+
+.cities-group__name
+    color: $colors.grey-dark
+    font-family: $fonts.family-tertiary
+    font-size: 22px
+    font-weight: 700
+    text-decoration: none
+    text-transform: uppercase
+
+    @media $query-only-xs
+        font-size: 30px
+
+.cities__list
+    list-style: none
+    margin-top: 2px
+    padding-top: 15px
+    padding-left: 0
+    border-top: 2px solid $colors.grey-dark
+
+.cities__list-item
+    padding-top: 2px
+    text-decoration: none
